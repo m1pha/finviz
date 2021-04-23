@@ -18,35 +18,18 @@ finviz-api
 Downloading & Installation
 -----
 
-To download the latest version from GitHub:
+    $ pip install -U git+https://github.com/mariostoev/finviz
 
-.. code:: bash
-
-    $ git clone https://github.com/mariostoev/finviz.git
-
-Then, run the setup.py file from the project directory
-
-.. code:: bash
-
-    $ sudo python setup.py install
-
-Alternatively, you can download and install the latest release on PyPi_ using:
-
-.. _PyPi: https://pypi.org/project/finviz/
-
-.. code:: bash
-
-   $ pip install finviz
 
 What is Finviz?
 =====
-FinViz_ aims to make market information accessible and provides a lot of data in visual snapshots, allowing traders and investors to quickly find the stock, future or forex pair they are looking for. The site provides advanced screeners, market maps, analysis, comparative tools and charts.
+FinViz_ aims to make market information accessible and provides a lot of data in visual snapshots, allowing traders and investors to quickly find the stock, future or forex pair they are looking for. The site provides advanced screeners, market maps, analysis, comparative tools, and charts.
 
-.. _FinViz: https://finviz.com/
+.. _FinViz: https://finviz.com/?a=128493348
 
 **Important Information**
 
-Any quotes data displayed on finviz.com is delayed by 15 minutes for NASDAQ, and 20 minutes for NYSE and AMEX. This API should **NOT** be used for live trading, it's main purpuse is financial analysis, research and data scraping.
+Any quotes data displayed on finviz.com is delayed by 15 minutes for NASDAQ, and 20 minutes for NYSE and AMEX. This API should **NOT** be used for live trading, it's main purpose is financial analysis, research, and data scraping.
 
 Using Screener
 =====
@@ -67,7 +50,7 @@ To make matters easier inside the code you won't refer to tables by their number
     stock_list = Screener(filters=filters, table='Performance', order='price')  # Get the performance table and sort it by price ascending
 
     # Export the screener results to .csv 
-    stock_list.to_csv()
+    stock_list.to_csv("stock.csv")
 
     # Create a SQLite database 
     stock_list.to_sqlite("stock.sqlite3")
@@ -178,9 +161,9 @@ You can contribute to the project by reporting bugs, suggesting enhancements, or
 
 *You can also buy me a coffee!*
 
-.. image:: http://rickrduncan.com/wp-content/uploads/2017/11/buy-me-coffee-paypal.png
+.. image:: https://hasutsuki.com/wp-content/uploads/2018/06/buy-me-a-coffee-with-paypal.png
         :target: https://www.paypal.me/finvizapi
 
 Disclaimer
 -----
-*Using the library to acquire data from FinViz is against their Terms of Service and robots.txt. Use it responsively and at your own risk. This library is built purely for educational purposes.*
+*Using the library to acquire data from FinViz is against their Terms of Service and robots.txt. Use it responsibly and at your own risk. This library is built purely for educational purposes.*
